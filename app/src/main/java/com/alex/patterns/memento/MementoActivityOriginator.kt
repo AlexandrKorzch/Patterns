@@ -5,15 +5,22 @@ import android.widget.EditText
 import com.alex.patterns.BaseActivity
 import com.alex.patterns.Language
 import com.alex.patterns.R
+import com.alex.patterns.memento.java.CaretakerJava
+import com.alex.patterns.memento.java.MementoJava
+import com.alex.patterns.memento.kotlin.CaretakerKotlin
+import com.alex.patterns.memento.kotlin.MementoKotlin
 import kotlinx.android.synthetic.main.activity_momento.*
 
-class MementoActivity : BaseActivity() {
+class MementoActivityOriginator : BaseActivity() {
 
     override fun toolbarTitle() = R.string.momento
     override fun layoutId() = R.layout.activity_momento
     override fun isBackButton() = true
 
     private lateinit var edText: EditText
+
+    private val careTakerKotlin: CaretakerKotlin by lazy { CaretakerKotlin() }
+    private val careTakerJava: CaretakerJava by lazy { CaretakerJava() }
 
     override fun onCreate() {
         setClickListener(btSave, btRestore)
@@ -43,19 +50,19 @@ class MementoActivity : BaseActivity() {
     }
 
     private fun saveStateJava() {
-
+        careTakerJava.memento = MementoJava(edText.text.toString())
     }
 
     private fun saveStateKotlin() {
-
+        careTakerKotlin.memento = MementoKotlin(edText.text.toString())
     }
 
     private fun restoreStateJava() {
-
+        edText.setText(careTakerJava.memento?.state)
     }
 
     private fun restoreStateKotlin() {
-
+        edText.setText(careTakerKotlin.memento?.state)
     }
 
 }

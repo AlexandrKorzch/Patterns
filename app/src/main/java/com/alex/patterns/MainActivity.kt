@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.alex.patterns.memento.MementoActivity
+import com.alex.patterns.memento.MementoActivityOriginator
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btMomento -> startActivity(Intent(this, MementoActivity::class.java))
+            R.id.btMomento -> startActivity(Intent(this, MementoActivityOriginator::class.java))
         }
     }
 }
