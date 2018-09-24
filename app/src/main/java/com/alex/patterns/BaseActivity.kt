@@ -1,6 +1,5 @@
 package com.alex.patterns
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
@@ -15,10 +14,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     abstract fun toolbarTitle(): Int
     abstract fun isBackButton(): Boolean
 
-    abstract fun performInJava()
-    abstract fun performInKotlin()
-
-    private var language : Language? = null
+    protected var language : Language? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,11 +36,19 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         views.forEach { it.setOnClickListener(this) }
     }
 
-    protected fun performAction(){
+    protected fun toast(messageId : Int){
+        Toast.makeText(this, getString(messageId), Toast.LENGTH_SHORT).show()
+    }
+
+    protected fun toast(message : String){
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun checkLanguage(){
         when(language){
-            Language.KOTLIN -> performInKotlin()
-            Language.JAVA -> performInJava()
-            else -> Toast.makeText(this, getString(R.string.check_language), Toast.LENGTH_LONG).show()
+            Language.KOTLIN -> toast(R.string.kotlin)
+            Language.JAVA -> toast(R.string.java)
+            else -> toast(R.string.check_language)
         }
     }
 
@@ -58,6 +62,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+        checkLanguage()
     }
 }
 

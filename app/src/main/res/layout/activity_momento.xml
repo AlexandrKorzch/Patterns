@@ -9,7 +9,31 @@
 
     <include layout="@layout/rg_java_kotlin"/>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="104dp"
+        android:hint="@string/write_text"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btRestore"
+        android:text="@string/save_text"/>
 
+    <Button
+        android:id="@+id/btRestore"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@id/btSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/restore_text"/>
 
 </android.support.constraint.ConstraintLayout>
