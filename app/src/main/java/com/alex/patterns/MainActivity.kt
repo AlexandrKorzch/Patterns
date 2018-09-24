@@ -1,22 +1,22 @@
 package com.alex.patterns
 
+import android.content.Intent
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.alex.patterns.momento.MomentoActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.alex.patterns.memento.MementoActivity
 
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    override fun isBackButton() = false
-    override fun toolbarTitle() = R.string.app_name
-    override fun layoutId() = R.layout.activity_main
-
-    override fun onCreate() {
-        setClickListener(btMomento)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        findViewById<View>(R.id.btMomento).setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btMomento -> open(MomentoActivity::class.java)
+            R.id.btMomento -> startActivity(Intent(this, MementoActivity::class.java))
         }
     }
 }

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import android.widget.RadioGroup
+import android.widget.Toast
 
 abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -13,11 +15,17 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     abstract fun toolbarTitle(): Int
     abstract fun isBackButton(): Boolean
 
+    abstract fun performInJava()
+    abstract fun performInKotlin()
+
+    private var language : Language? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutId())
         supportActionBar?.title = getString(toolbarTitle())
         if (isBackButton()) supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        initRadioGroup()
         onCreate()
     }
 
@@ -28,17 +36,32 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         return super.onOptionsItemSelected(item)
     }
 
-    protected fun open(clazz: Class<out AppCompatActivity>) {
-        startActivity(Intent(this, clazz))
-    }
-
     protected fun setClickListener(vararg views: View) {
         views.forEach { it.setOnClickListener(this) }
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
-//            R.id.btMomento -> open(MomentoActivity::class.java)
+    protected fun performAction(){
+        when(language){
+            Language.KOTLIN -> performInKotlin()
+            Language.JAVA -> performInJava()
+            else -> Toast.makeText(this, getString(R.string.check_language), Toast.LENGTH_LONG).show()
         }
     }
+
+    private fun initRadioGroup(){
+        findViewById<RadioGroup>(R.id.rgLanguage)?.setOnCheckedChangeListener { _, checkedId ->
+            when(checkedId){
+                R.id.rbJava -> language = Language.JAVA
+                R.id.rbKotlin -> language = Language.KOTLIN
+            }
+        }
+    }
+
+    override fun onClick(v: View) {
+    }
+}
+
+enum class Language{
+    KOTLIN,
+    JAVA
 }

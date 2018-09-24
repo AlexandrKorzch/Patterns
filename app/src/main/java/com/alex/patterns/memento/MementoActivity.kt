@@ -1,9 +1,9 @@
-package com.alex.patterns.momento
+package com.alex.patterns.memento
 
 import com.alex.patterns.BaseActivity
 import com.alex.patterns.R
 
-class MomentoActivity : BaseActivity() {
+class MementoActivity : BaseActivity() {
 
     override fun toolbarTitle() = R.string.momento
     override fun layoutId() = R.layout.activity_momento
@@ -13,6 +13,11 @@ class MomentoActivity : BaseActivity() {
 
     }
 
+    override fun performInJava() {
 
+    }
 
+    override fun performInKotlin() {
+
+    }
 }
