@@ -12,12 +12,16 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/adapter"/>
+
+        <Button
             android:id="@+id/btMomento"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="@string/momento"/>
 
-
     </LinearLayout>
-
 </ScrollView>
