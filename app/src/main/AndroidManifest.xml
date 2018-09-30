@@ -17,5 +17,6 @@
         </activity>
         <activity android:name=".memento.MementoActivityOriginator"/>
         <activity android:name=".adapter.AdapterActivity"/>
+        <activity android:name=".bridge.BridgeActivity"/>
     </application>
 </manifest>
