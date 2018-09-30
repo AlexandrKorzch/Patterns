@@ -46,8 +46,8 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun checkLanguage(){
         when(language){
-            Language.KOTLIN -> toast(R.string.kotlin)
-            Language.JAVA -> toast(R.string.java)
+            Language.KOTLIN -> {}//toast(R.string.kotlin)
+            Language.JAVA -> {}//toast(R.string.java)
             else -> toast(R.string.check_language)
         }
     }

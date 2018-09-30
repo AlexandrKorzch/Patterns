@@ -20,6 +20,6 @@
         <activity android:name=".adapter.AdapterActivity"/>
         <activity android:name=".command.CommandActivity"/>
         <activity android:name=".bridge.BridgeActivity"/>
+        <activity android:name=".state.StateActivity"/>
     </application>
-
 </manifest>
