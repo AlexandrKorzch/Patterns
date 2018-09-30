@@ -9,7 +9,7 @@
     android:layout_marginEnd="16dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:showIn="@layout/activity_momento">
+    tools:showIn="@layout/activity_memento">
 
     <RadioButton
         android:id="@+id/rbJava"

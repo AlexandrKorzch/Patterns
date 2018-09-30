@@ -9,12 +9,12 @@ import com.alex.patterns.memento.java.CaretakerJava
 import com.alex.patterns.memento.java.MementoJava
 import com.alex.patterns.memento.kotlin.CaretakerKotlin
 import com.alex.patterns.memento.kotlin.MementoKotlin
-import kotlinx.android.synthetic.main.activity_momento.*
+import kotlinx.android.synthetic.main.activity_memento.*
 
 class MementoActivityOriginator : BaseActivity() {
 
     override fun toolbarTitle() = R.string.momento
-    override fun layoutId() = R.layout.activity_momento
+    override fun layoutId() = R.layout.activity_memento
     override fun isBackButton() = true
 
     private lateinit var edText: EditText

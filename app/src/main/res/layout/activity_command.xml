@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".command.CommandActivity">
+
+    <include layout="@layout/rg_java_kotlin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/rgSwitcher"
+        app:layout_constraintEnd_toEndOf="@id/rgSwitcher"
+        app:layout_constraintBottom_toTopOf="@+id/rgSwitcher"
+        android:text="@string/invoker"/>
+
+    <RadioGroup
+        android:id="@+id/rgSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rgSwitcherTwo"
+        android:layout_marginTop="120dp"
+        tools:showIn="@layout/activity_memento">
+
+        <RadioButton
+            android:id="@+id/rbOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/rbTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/rbThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/rbFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/rgSwitcherTwo"
+        app:layout_constraintEnd_toEndOf="@id/rgSwitcherTwo"
+        app:layout_constraintBottom_toTopOf="@+id/rgSwitcherTwo"
+        android:text="@string/receiver"/>
+
+    <RadioGroup
+        android:id="@+id/rgSwitcherTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toEndOf="@id/rgSwitcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btUndo"
+        tools:showIn="@layout/activity_memento">
+
+        <RadioButton
+            android:id="@+id/rbOne_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/rbTwo_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+
+        <RadioButton
+            android:id="@+id/rbThree_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/rbFour_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/undo"
+        app:layout_constraintTop_toTopOf="@id/rgSwitcherTwo"
+        app:layout_constraintBottom_toBottomOf="@id/rgSwitcherTwo"
+        app:layout_constraintStart_toEndOf="@id/rgSwitcherTwo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
