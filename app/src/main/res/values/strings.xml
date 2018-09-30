@@ -1,16 +1,19 @@
 <resources>
-    <string name="app_name">Patterns</string>
-    <string name="momento">Memento</string>
+    <string name="add_to_observable">Add to Observable</string>
     <string name="check_language">Please check language</string>
     <string name="restore_text">Restore State</string>
-    <string name="save_text">Save State</string>
     <string name="write_text">Write Text</string>
-    <string name="kotlin">Kotlin</string>
-    <string name="java">Java</string>
+    <string name="save_text">Save State</string>
+    <string name="app_name">Patterns</string>
+    <string name="observer">Observer</string>
     <string name="adapter">Adapter</string>
-    <string name="hello">Hello</string>
-    <string name="buy">Buy</string>
+    <string name="momento">Memento</string>
+    <string name="kotlin">Kotlin</string>
     <string name="bridge">Bridge</string>
     <string name="green">Green</string>
+    <string name="hello">Hello</string>
+    <string name="java">Java</string>
+    <string name="send">Send</string>
+    <string name="buy">Buy</string>
     <string name="red">Red</string>
 </resources>

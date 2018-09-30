@@ -64,5 +64,4 @@ class MementoActivityOriginator : BaseActivity() {
     private fun restoreStateKotlin() {
         edText.setText(careTakerKotlin.memento?.state)
     }
-
 }

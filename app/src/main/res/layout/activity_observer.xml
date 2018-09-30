@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".observer.ObserverActivity">
+
+    <include layout="@layout/rg_java_kotlin"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="104dp"
+        android:hint="@string/write_text"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btSend"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:text="@string/send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <TextView
+        android:id="@+id/tvOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_observable"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btSend"
+        app:layout_constraintEnd_toStartOf="@id/tvTwo"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_observable"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btSend"
+        app:layout_constraintEnd_toStartOf="@id/tvThree"
+        app:layout_constraintStart_toEndOf="@id/tvOne"/>
+
+    <TextView
+        android:id="@+id/tvThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_observable"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTwo"/>
+
+</android.support.constraint.ConstraintLayout>
