@@ -11,6 +11,7 @@ import com.alex.patterns.command.CommandActivity
 import com.alex.patterns.memento.MementoActivityOriginator
 import com.alex.patterns.observer.ObserverActivity
 import com.alex.patterns.state.StateActivity
+import com.alex.patterns.strategy.StrategyActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<View>(R.id.btStrategy).setOnClickListener(this)
         findViewById<View>(R.id.btState).setOnClickListener(this)
         findViewById<View>(R.id.btCommand).setOnClickListener(this)
         findViewById<View>(R.id.btObserver).setOnClickListener(this)
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
+            R.id.btStrategy -> open(StrategyActivity::class.java)
             R.id.btState -> open(StateActivity::class.java)
             R.id.btCommand -> open(CommandActivity::class.java)
             R.id.btObserver -> open(ObserverActivity::class.java)

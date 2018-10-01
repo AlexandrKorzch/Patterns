@@ -7,6 +7,7 @@
     <string name="app_name">Patterns</string>
     <string name="receiver">Receiver</string>
     <string name="observer">Observer</string>
+    <string name="strategy">Strategy</string>
     <string name="command">Command</string>
     <string name="adapter">Adapter</string>
     <string name="momento">Memento</string>
@@ -16,6 +17,7 @@
     <string name="green">Green</string>
     <string name="hello">Hello</string>
     <string name="state">State</string>
+    <string name="crypt">Crypt</string>
     <string name="java">Java</string>
     <string name="undo">Undo</string>
     <string name="send">Send</string>
