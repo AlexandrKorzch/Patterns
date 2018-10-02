@@ -12,6 +12,12 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btMediator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/mediator"/>
+
+        <Button
             android:id="@+id/btStrategy"
             android:layout_width="match_parent"
             android:layout_height="40dp"

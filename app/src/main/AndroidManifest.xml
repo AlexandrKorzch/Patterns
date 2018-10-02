@@ -18,6 +18,7 @@
         <activity android:name=".memento.MementoActivityOriginator"/>
         <activity android:name=".observer.ObserverActivity"/>
         <activity android:name=".strategy.StrategyActivity"/>
+        <activity android:name=".mediator.MediatorActivity"/>
         <activity android:name=".adapter.AdapterActivity"/>
         <activity android:name=".command.CommandActivity"/>
         <activity android:name=".bridge.BridgeActivity"/>

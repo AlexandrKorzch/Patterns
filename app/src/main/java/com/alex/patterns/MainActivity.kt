@@ -8,6 +8,7 @@ import android.view.View
 import com.alex.patterns.adapter.AdapterActivity
 import com.alex.patterns.bridge.BridgeActivity
 import com.alex.patterns.command.CommandActivity
+import com.alex.patterns.mediator.MediatorActivity
 import com.alex.patterns.memento.MementoActivityOriginator
 import com.alex.patterns.observer.ObserverActivity
 import com.alex.patterns.state.StateActivity
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<View>(R.id.btMediator).setOnClickListener(this)
         findViewById<View>(R.id.btStrategy).setOnClickListener(this)
         findViewById<View>(R.id.btState).setOnClickListener(this)
         findViewById<View>(R.id.btCommand).setOnClickListener(this)
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
+            R.id.btMediator -> open(MediatorActivity::class.java)
             R.id.btStrategy -> open(StrategyActivity::class.java)
             R.id.btState -> open(StateActivity::class.java)
             R.id.btCommand -> open(CommandActivity::class.java)
