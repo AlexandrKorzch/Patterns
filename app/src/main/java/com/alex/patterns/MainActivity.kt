@@ -13,6 +13,7 @@ import com.alex.patterns.memento.MementoActivityOriginator
 import com.alex.patterns.observer.ObserverActivity
 import com.alex.patterns.state.StateActivity
 import com.alex.patterns.strategy.StrategyActivity
+import com.alex.patterns.visitor.VisitorActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -22,24 +23,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         findViewById<View>(R.id.btMediator).setOnClickListener(this)
         findViewById<View>(R.id.btStrategy).setOnClickListener(this)
-        findViewById<View>(R.id.btState).setOnClickListener(this)
-        findViewById<View>(R.id.btCommand).setOnClickListener(this)
         findViewById<View>(R.id.btObserver).setOnClickListener(this)
-        findViewById<View>(R.id.btBridge).setOnClickListener(this)
+        findViewById<View>(R.id.btVisitor).setOnClickListener(this)
+        findViewById<View>(R.id.btCommand).setOnClickListener(this)
         findViewById<View>(R.id.btMomento).setOnClickListener(this)
         findViewById<View>(R.id.btAdapter).setOnClickListener(this)
+        findViewById<View>(R.id.btBridge).setOnClickListener(this)
+        findViewById<View>(R.id.btState).setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         when (v.id) {
+            R.id.btMomento -> open(MementoActivityOriginator::class.java)
             R.id.btMediator -> open(MediatorActivity::class.java)
             R.id.btStrategy -> open(StrategyActivity::class.java)
-            R.id.btState -> open(StateActivity::class.java)
-            R.id.btCommand -> open(CommandActivity::class.java)
             R.id.btObserver -> open(ObserverActivity::class.java)
-            R.id.btBridge -> open(BridgeActivity::class.java)
-            R.id.btMomento -> open(MementoActivityOriginator::class.java)
+            R.id.btVisitor -> open(VisitorActivity::class.java)
+            R.id.btCommand -> open(CommandActivity::class.java)
             R.id.btAdapter -> open(AdapterActivity::class.java)
+            R.id.btBridge -> open(BridgeActivity::class.java)
+            R.id.btState -> open(StateActivity::class.java)
         }
     }
 

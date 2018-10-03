@@ -1,6 +1,7 @@
 <resources>
     <string name="add_to_observable">Add to Observable</string>
     <string name="check_language">Please check language</string>
+    <string name="visit"><![CDATA[visit ->]]></string>
     <string name="restore_text">Restore State</string>
     <string name="write_text">Write Text</string>
     <string name="save_text">Save State</string>
@@ -14,6 +15,7 @@
     <string name="adapter">Adapter</string>
     <string name="momento">Memento</string>
     <string name="invoker">Invoker</string>
+    <string name="visitor">Visitor</string>
     <string name="bridge">Bridge</string>
     <string name="kotlin">Kotlin</string>
     <string name="green">Green</string>
