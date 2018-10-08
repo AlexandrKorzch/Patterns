@@ -28,4 +28,9 @@
     <string name="buy">Buy</string>
     <string name="red">Red</string>
     <string name="composite">Composite</string>
+    <string name="decorator">Decorator</string>
+    <string name="decorate">Decorate</string>
+    <string name="braces">braces { }</string>
+    <string name="square_brackets">square brackets [ ]</string>
+    <string name="round_brackets">round brackets ( )</string>
 </resources>

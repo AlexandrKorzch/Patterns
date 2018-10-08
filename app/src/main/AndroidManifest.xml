@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".memento.MementoActivityOriginator"/>
         <activity android:name=".composite.CompositeActivity"/>
+        <activity android:name=".decorator.DecoratorActivity"/>
         <activity android:name=".observer.ObserverActivity"/>
         <activity android:name=".strategy.StrategyActivity"/>
         <activity android:name=".mediator.MediatorActivity"/>
