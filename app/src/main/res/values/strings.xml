@@ -1,14 +1,15 @@
 <resources>
     <string name="add_to_observable">Add to Observable</string>
     <string name="check_language">Please check language</string>
-    <string name="visit"><![CDATA[visit ->]]></string>
     <string name="restore_text">Restore State</string>
     <string name="write_text">Write Text</string>
     <string name="save_text">Save State</string>
-    <string name="next"><![CDATA[->]]></string>
+    <string name="composite">Composite</string>
+    <string name="decorator">Decorator</string>
     <string name="app_name">Patterns</string>
     <string name="receiver">Receiver</string>
     <string name="observer">Observer</string>
+    <string name="decorate">Decorate</string>
     <string name="strategy">Strategy</string>
     <string name="mediator">Mediator</string>
     <string name="command">Command</string>
@@ -18,6 +19,7 @@
     <string name="visitor">Visitor</string>
     <string name="bridge">Bridge</string>
     <string name="kotlin">Kotlin</string>
+    <string name="facade">Facade</string>
     <string name="green">Green</string>
     <string name="hello">Hello</string>
     <string name="state">State</string>
@@ -27,10 +29,9 @@
     <string name="send">Send</string>
     <string name="buy">Buy</string>
     <string name="red">Red</string>
-    <string name="composite">Composite</string>
-    <string name="decorator">Decorator</string>
-    <string name="decorate">Decorate</string>
-    <string name="braces">braces { }</string>
     <string name="square_brackets">square brackets [ ]</string>
     <string name="round_brackets">round brackets ( )</string>
+    <string name="braces">braces { }</string>
+    <string name="visit"><![CDATA[visit ->]]></string>
+    <string name="next"><![CDATA[->]]></string>
 </resources>

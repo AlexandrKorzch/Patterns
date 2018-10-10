@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -24,8 +25,10 @@
         <activity android:name=".adapter.AdapterActivity"/>
         <activity android:name=".command.CommandActivity"/>
         <activity android:name=".visitor.VisitorActivity"/>
+        <activity android:name=".facade.FacadeActivity"/>
         <activity android:name=".bridge.BridgeActivity"/>
         <activity android:name=".state.StateActivity"/>
+
     </application>
 
 </manifest>

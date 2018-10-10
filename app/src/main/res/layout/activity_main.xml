@@ -12,6 +12,12 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btFacade"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/facade"/>
+
+        <Button
             android:id="@+id/btDecorator"
             android:layout_width="match_parent"
             android:layout_height="40dp"
