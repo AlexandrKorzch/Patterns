@@ -34,4 +34,8 @@
     <string name="braces">braces { }</string>
     <string name="visit"><![CDATA[visit ->]]></string>
     <string name="next"><![CDATA[->]]></string>
+    <string name="title_activity_proxy">ProxyActivity</string>
+    <string name="proxy">Proxy</string>
+    <string name="load_computer_kotlin">Load Computer Kotlin</string>
+    <string name="load_computer_java">Load Computer Java</string>
 </resources>

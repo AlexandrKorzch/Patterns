@@ -14,6 +14,7 @@ import com.alex.patterns.facade.FacadeActivity
 import com.alex.patterns.mediator.MediatorActivity
 import com.alex.patterns.memento.MementoActivityOriginator
 import com.alex.patterns.observer.ObserverActivity
+import com.alex.patterns.proxy.ProxyActivity
 import com.alex.patterns.state.StateActivity
 import com.alex.patterns.strategy.StrategyActivity
 import com.alex.patterns.visitor.VisitorActivity
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.btAdapter).setOnClickListener(this)
         findViewById<View>(R.id.btFacade).setOnClickListener(this)
         findViewById<View>(R.id.btBridge).setOnClickListener(this)
+        findViewById<View>(R.id.btProxy).setOnClickListener(this)
         findViewById<View>(R.id.btState).setOnClickListener(this)
     }
 
@@ -51,6 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btAdapter -> open(AdapterActivity::class.java)
             R.id.btFacade -> open(FacadeActivity::class.java)
             R.id.btBridge -> open(BridgeActivity::class.java)
+            R.id.btProxy -> open(ProxyActivity::class.java)
             R.id.btState -> open(StateActivity::class.java)
         }
     }

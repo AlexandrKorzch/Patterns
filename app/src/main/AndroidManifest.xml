@@ -28,7 +28,11 @@
         <activity android:name=".facade.FacadeActivity"/>
         <activity android:name=".bridge.BridgeActivity"/>
         <activity android:name=".state.StateActivity"/>
-
+        <activity
+            android:name=".proxy.ProxyActivity"
+            android:label="@string/title_activity_proxy"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

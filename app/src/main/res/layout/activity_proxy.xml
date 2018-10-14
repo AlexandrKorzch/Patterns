@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".proxy.ProxyActivity"
+    tools:showIn="@layout/activity_proxy">
+
+    <include layout="@layout/rg_java_kotlin"/>
+
+    <EditText
+        android:id="@+id/etFirst"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:inputType="number"
+        android:text="10"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/btPlus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btPlus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@id/btMinus"
+        app:layout_constraintEnd_toStartOf="@id/etSecond"
+        app:layout_constraintStart_toEndOf="@id/etFirst"
+        app:layout_constraintTop_toTopOf="@id/etFirst"/>
+
+
+    <Button
+        android:id="@+id/btMinus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@id/btDivide"
+        app:layout_constraintEnd_toStartOf="@id/etSecond"
+        app:layout_constraintStart_toEndOf="@id/etFirst"
+        app:layout_constraintTop_toBottomOf="@+id/btPlus"/>
+
+    <Button
+        android:id="@+id/btDivide"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@id/btMultiple"
+        app:layout_constraintEnd_toStartOf="@id/etSecond"
+        app:layout_constraintStart_toEndOf="@id/etFirst"
+        app:layout_constraintTop_toBottomOf="@+id/btMinus"/>
+
+    <Button
+        android:id="@+id/btMultiple"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="@+id/etFirst"
+        app:layout_constraintEnd_toStartOf="@id/etSecond"
+        app:layout_constraintStart_toEndOf="@id/etFirst"
+        app:layout_constraintTop_toBottomOf="@+id/btDivide"/>
+
+    <EditText
+        android:id="@+id/etSecond"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:inputType="number"
+        android:text="10"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btPlus"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
