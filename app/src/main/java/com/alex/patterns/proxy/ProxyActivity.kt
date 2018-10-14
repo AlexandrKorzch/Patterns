@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_proxy.*
 
 class ProxyActivity : BaseActivity() {
 
-    override fun toolbarTitle() = R.string.facade
+    override fun toolbarTitle() = R.string.proxy
     override fun layoutId() = R.layout.activity_proxy
     override fun isBackButton() = true
 

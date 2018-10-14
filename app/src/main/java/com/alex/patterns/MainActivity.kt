@@ -11,6 +11,7 @@ import com.alex.patterns.command.CommandActivity
 import com.alex.patterns.composite.CompositeActivity
 import com.alex.patterns.decorator.DecoratorActivity
 import com.alex.patterns.facade.FacadeActivity
+import com.alex.patterns.flyweight.FlyWeightActivity
 import com.alex.patterns.mediator.MediatorActivity
 import com.alex.patterns.memento.MementoActivityOriginator
 import com.alex.patterns.observer.ObserverActivity
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<View>(R.id.btFlyWeight).setOnClickListener(this)
         findViewById<View>(R.id.btDecorator).setOnClickListener(this)
         findViewById<View>(R.id.btComposite).setOnClickListener(this)
         findViewById<View>(R.id.btMediator).setOnClickListener(this)
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btMomento -> open(MementoActivityOriginator::class.java)
+            R.id.btFlyWeight -> open(FlyWeightActivity::class.java)
             R.id.btComposite -> open(CompositeActivity::class.java)
             R.id.btDecorator -> open(DecoratorActivity::class.java)
             R.id.btMediator -> open(MediatorActivity::class.java)

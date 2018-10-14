@@ -12,13 +12,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".memento.MementoActivityOriginator"/>
         <activity android:name=".composite.CompositeActivity"/>
         <activity android:name=".decorator.DecoratorActivity"/>
+        <activity android:name=".flyweight.FlyWeightActivity"/>
         <activity android:name=".observer.ObserverActivity"/>
         <activity android:name=".strategy.StrategyActivity"/>
         <activity android:name=".mediator.MediatorActivity"/>
@@ -28,11 +28,7 @@
         <activity android:name=".facade.FacadeActivity"/>
         <activity android:name=".bridge.BridgeActivity"/>
         <activity android:name=".state.StateActivity"/>
-        <activity
-            android:name=".proxy.ProxyActivity"
-            android:label="@string/title_activity_proxy"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+        <activity android:name=".proxy.ProxyActivity"/>
     </application>
 
 </manifest>
